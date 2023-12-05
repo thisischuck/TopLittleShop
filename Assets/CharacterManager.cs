@@ -11,6 +11,7 @@ public class CharacterManager : MonoBehaviour
     private Animator _animator;
     private float _speed = 5;
     private Vector3 _direction;
+    private bool interacted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,11 @@ public class CharacterManager : MonoBehaviour
         {
             _animator.Play("Rogue_idle_01");
         }
+    }
 
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            interacted = context.ReadValueAsButton();
     }
 }

@@ -15,17 +15,10 @@ public class GameItem : ScriptableObject
     public ResourceTag tag;
     public int weight;
     public int health;
-    public Vector2 dropMinMax = new Vector2(5, 10);
-    //Which tools is used to gather them? 
-    public string tool;
+    public int worth;
 
     [JsonIgnore]
     public Sprite itemSprite;
-    [JsonIgnore]
-    public Sprite dropSprite;
-    [JsonIgnore]
-    public GameObject itemPrefab;
-    //Just in case we want to dismantle it.
     public CraftRecipe recipe = null;
 
     public static GameItem Create(GameItem i)
@@ -45,7 +38,6 @@ public class GameItem : ScriptableObject
         item.tag = i.tag;
         item.weight = i.weight;
         item.health = i.health;
-        item.tool = i.tool;
 
         if (item.recipe != null)
         {

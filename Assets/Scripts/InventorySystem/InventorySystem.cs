@@ -14,6 +14,8 @@ public class InventorySystem : ScriptableObject
     public UnityAction<GameItem, int> OnitemAdded;
     public UnityAction<GameItem, int> OnitemRemoved;
 
+    public int MoneyInTheBank;
+
     void OnEnable()
     {
         //inventory = new SerializedDictionary<GameItem, int>();

@@ -4,6 +4,7 @@ using UnityEngine;
 using Quests;
 using UnityEngine.Events;
 using Unity.VisualScripting;
+using Inventory;
 
 [CreateAssetMenu(menuName = "Systems/QuestSystem")]
 public class QuestSystem : ScriptableObject

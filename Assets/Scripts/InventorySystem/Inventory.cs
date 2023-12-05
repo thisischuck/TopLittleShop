@@ -6,6 +6,12 @@ namespace Inventory
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TypeOfObject
     {
-        Goods, Resources, SpecialObjects, QuestObjects
+        Goods, Resources, SpecialObjects, QuestObjects, Equipment
     };
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ResourceTag
+    {
+        Currency, Resource, Item, Tool,
+    }
 }

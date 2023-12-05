@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using Quests;
 using Newtonsoft.Json;
 using System.IO;
+using Inventory;
 using MyJsonConverters;
 
 [CreateAssetMenu(menuName = "Data/Quests/SubTasks")]

@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
 using Quests;
+using Inventory;
 using Newtonsoft.Json;
 using MyJsonConverters;
 using AYellowpaper.SerializedCollections;

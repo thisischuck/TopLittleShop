@@ -6,6 +6,7 @@ using UnityEngine.Windows.Speech;
 
 public class CharacterManager : MonoBehaviour
 {
+    private Rigidbody2D _body;
     public Transform Sprites;
     private PlayerInput _input;
     private Animator _animator;
@@ -17,15 +18,17 @@ public class CharacterManager : MonoBehaviour
     {
         _input = GetComponent<PlayerInput>();
         _animator = GetComponent<Animator>();
+        _body = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        transform.position += _direction * _speed * Time.deltaTime;
+        _body.velocity = _direction * _speed;
     }
 
     public void OnDirection(InputAction.CallbackContext context)
     {
+        _direction = context.ReadValue<Vector2>();
         if (context.performed)
         {
             _animator.Play("Rogue_run_01");
@@ -36,8 +39,6 @@ public class CharacterManager : MonoBehaviour
         {
             _animator.Play("Rogue_idle_01");
         }
-        _direction = context.ReadValue<Vector2>();
-
 
     }
 }

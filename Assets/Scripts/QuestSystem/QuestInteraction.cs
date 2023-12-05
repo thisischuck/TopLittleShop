@@ -10,8 +10,6 @@ public class QuestInteraction : MonoBehaviour
     public CharacterTag characterTag;
     public QuestSystem questSystem;
     public InventorySystem inventorySystem;
-    [Space(10)]
-    [Header("Sounds")]
 
     [SerializeField] Vector3 InitialScale;
 

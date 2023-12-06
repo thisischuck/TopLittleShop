@@ -49,7 +49,7 @@ public class ShopObject : MonoBehaviour
             if (!interacted)
                 LabelVisibility(true);
             else
-                GetList();
+                shopSystem.ShopOpen?.Invoke();
         }
     }
 

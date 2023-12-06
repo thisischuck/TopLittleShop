@@ -415,13 +415,14 @@ GameObject:
   - component: {fileID: 673502906}
   - component: {fileID: 673502905}
   - component: {fileID: 673502904}
+  - component: {fileID: 673502908}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &673502904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +505,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &673502908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673502903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa753cacdfce4defb7a01eb9d6bf82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopSystem: {fileID: 11400000, guid: 63f99b4af7212401594f8d52d0fda600, type: 2}
+  ShopUI: {fileID: 1232724567}
 --- !u!1001 &770883815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1071,13 +1086,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232724568}
+  - component: {fileID: 1232724569}
   m_Layer: 5
   m_Name: ShopUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1232724568
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1099,6 +1115,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 420}
   m_SizeDelta: {x: 820, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1232724569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232724567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06867c6c285d4464b8ed4377beb4306a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1266234046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1516,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1520137472}
-  - component: {fileID: 1520137474}
   - component: {fileID: 1520137473}
   m_Layer: 0
   m_Name: Seller
@@ -1540,37 +1567,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1520137474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520137471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1d831e4495d104e8b7db36421ee5a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopSystem: {fileID: 11400000, guid: 63f99b4af7212401594f8d52d0fda600, type: 2}
-  Label: {fileID: 1417217586}
-  interacted: 0
-  itemsDisplayed:
-  - {fileID: 11400000, guid: 048a2fe170db68446a39b2a4b9301c82, type: 2}
-  - {fileID: 11400000, guid: 071d253a2705cb24f9bc1069f7d82a30, type: 2}
-  - {fileID: 11400000, guid: 0005d934bf044f94184983c3a8f0fde3, type: 2}
-  - {fileID: 11400000, guid: f1cf75b6fdd614d40a432c2356c0ad60, type: 2}
-  - {fileID: 11400000, guid: 98a2d4613a7a6714aa54eaa52c0d2a5c, type: 2}
-  - {fileID: 11400000, guid: d4447197b66ac8b49b9b9d4646b8f35c, type: 2}
-  - {fileID: 11400000, guid: 2124b734147088e4fa496e757a4d829f, type: 2}
-  - {fileID: 11400000, guid: 683765a85f8ae45468a2317efdd02682, type: 2}
-  - {fileID: 11400000, guid: 542d5f12fdd57254788e98be71489e1d, type: 2}
-  - {fileID: 11400000, guid: 68d86b3a61564154a90aa18360973135, type: 2}
-  - {fileID: 11400000, guid: 11d6450ff4e97d746b6325711fff87c7, type: 2}
-  - {fileID: 11400000, guid: 457dd92a0f8443b4388097f47a0c02d2, type: 2}
-  - {fileID: 11400000, guid: 67f15a9b37c942443aee1727ac583982, type: 2}
-  - {fileID: 11400000, guid: 2bdbd203eae31f44f98aded49e997731, type: 2}
-  - {fileID: 11400000, guid: 2999663abbc81714c8c590eefe1cc29a, type: 2}
 --- !u!1 &1550298233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +2008,7 @@ GameObject:
   - component: {fileID: 1938270387}
   - component: {fileID: 1938270386}
   m_Layer: 5
-  m_Name: Shop
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

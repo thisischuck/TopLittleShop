@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
+using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Systems/ShopSystem")]
 public class ShopSystem : ScriptableObject
 {
+    public UnityAction ShopOpen;
+
     public SerializedDictionary<GameItem, int> ShopInventory;
 
-    public bool Buy(GameItem item, int currency, InventorySystem inventorySystem)
+    public bool Buy(GameItem item, InventorySystem inventorySystem)
     {
-        if (ContainsById(item.id) && currency > item.worth && ShopInventory[item] > 0)
+        if (ContainsById(item.id) && ShopInventory[item] > 0 && inventorySystem.MoneyInTheBank > item.worth)
         {
             ShopInventory[item] -= 1;
             Debug.Log("BuysIt");

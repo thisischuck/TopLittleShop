@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: ShopSystem
   m_EditorClassIdentifier: 
   ShopInventory:
-    _serializedList:
-    - Key: {fileID: 11400000, guid: 27c69ee82e9b61142a807a4be7c9f017, type: 2}
-      Value: 1
+    _serializedList: []

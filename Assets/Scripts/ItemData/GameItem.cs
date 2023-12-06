@@ -17,8 +17,10 @@ public class GameItem : ScriptableObject
     public int health;
     public int worth;
 
+    public bool isBothSides = false;
     [JsonIgnore]
-    public Sprite itemSprite;
+    public Sprite itemSprite, rightSprite;
+
     public CraftRecipe recipe = null;
 
     public static GameItem Create(GameItem i)

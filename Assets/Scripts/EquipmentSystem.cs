@@ -30,4 +30,9 @@ public class EquipmentSystem : ScriptableObject
 
         EquipmentChanged?.Invoke(position);
     }
+
+    public bool isEquiped(GameItem item)
+    {
+        return Equipment.ContainsValue(item);
+    }
 }

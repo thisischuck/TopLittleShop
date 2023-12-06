@@ -19,6 +19,8 @@ public class ShopSystem : ScriptableObject
             Debug.Log("BuysIt");
             inventorySystem.AddToInventory(item, 1);
             inventorySystem.MoneyInTheBank -= item.worth;
+            if (ShopInventory[item] <= 0)
+                ShopInventory.Remove(item);
             return true;
         }
         return false;

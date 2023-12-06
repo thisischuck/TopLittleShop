@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1923fe4b377f4dda9ebf504ade562ab, type: 3}
   m_Name: EquipmentSystem
   m_EditorClassIdentifier: 
-  inventorySystem: {fileID: 0}
+  inventorySystem: {fileID: 11400000, guid: 70cac9a6e32a20d478495537e367bf83, type: 2}
   Equipment:
     _serializedList:
     - Key: 0

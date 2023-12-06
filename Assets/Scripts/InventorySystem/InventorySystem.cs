@@ -9,18 +9,33 @@ using Inventory;
 [CreateAssetMenu(menuName = "Systems/InventorySystem")]
 public class InventorySystem : ScriptableObject
 {
-    public QuestSystem qs;
+    //public QuestSystem qs;
     public SerializedDictionary<GameItem, int> inventory;
     public UnityAction<GameItem, int> OnitemAdded;
     public UnityAction<GameItem, int> OnitemRemoved;
+    public UnityAction<int> moneyChanged;
 
-    public int MoneyInTheBank;
+    [SerializeField]
+    private int _moneyInTheBank;
+
+    public int MoneyInTheBank
+    {
+        get
+        {
+            return _moneyInTheBank;
+        }
+        set
+        {
+            _moneyInTheBank = value;
+            moneyChanged?.Invoke(_moneyInTheBank);
+        }
+    }
 
     void OnEnable()
     {
         //inventory = new SerializedDictionary<GameItem, int>();
-        qs.QuestAddedEvent += CheckProgressOnNewQuest;
-        qs.QuestRemovedEvent += ReceiveRewards;
+        //qs.QuestAddedEvent += CheckProgressOnNewQuest;
+        //qs.QuestRemovedEvent += ReceiveRewards;
     }
 
     void CheckProgressOnNewQuest(QuestData quest)
@@ -44,7 +59,7 @@ public class InventorySystem : ScriptableObject
         {
             string id = item.id.Trim("QuestItem".ToCharArray());
             QuestData data = Resources.Load<QuestData>("Data/Quests/" + id);
-            qs.AddQuest(data);
+            //qs.AddQuest(data);
             return;
         }
 
@@ -60,7 +75,9 @@ public class InventorySystem : ScriptableObject
         }
 
         if (trackable)
-            qs.AddProgress(item.tag, value);
+        {
+            //qs.AddProgress(item.tag, value);
+        }
 
         OnitemAdded?.Invoke(item, value);
     }

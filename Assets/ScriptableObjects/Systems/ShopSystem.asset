@@ -13,4 +13,42 @@ MonoBehaviour:
   m_Name: ShopSystem
   m_EditorClassIdentifier: 
   ShopInventory:
-    _serializedList: []
+    _serializedList:
+    - Key: {fileID: 11400000, guid: 7237892b5f62a6a499791c716179e5de, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 2bdbd203eae31f44f98aded49e997731, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 67f15a9b37c942443aee1727ac583982, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 457dd92a0f8443b4388097f47a0c02d2, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 68d86b3a61564154a90aa18360973135, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 542d5f12fdd57254788e98be71489e1d, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 2124b734147088e4fa496e757a4d829f, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: d4447197b66ac8b49b9b9d4646b8f35c, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 98a2d4613a7a6714aa54eaa52c0d2a5c, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 0005d934bf044f94184983c3a8f0fde3, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 048a2fe170db68446a39b2a4b9301c82, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: b584d32b2d6ec8d49a44cbdcd8226676, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 1174933f2e5d8bd4a8ec4cf3a0c75ffb, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 7a75fa38d7497ef4b9cfa6282df2755b, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 8261b7d1daed45441a5993fc6c438b5b, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: cb2e081e95f890343967603602e622fb, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: ed630a123b1193d419894c1b48c01bc0, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 8a6442b33b70eb2439cc05f1c1f1ef4b, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 75aa77918c86b754693dfab1981af61e, type: 2}
+      Value: 1

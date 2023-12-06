@@ -13,6 +13,7 @@ public enum EquipmentPosition
 public class EquipmentSystem : ScriptableObject
 {
     public UnityAction<EquipmentPosition> EquipmentChanged;
+    public UnityAction EquipOpen;
 
     public InventorySystem inventorySystem;
 

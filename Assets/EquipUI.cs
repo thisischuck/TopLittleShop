@@ -20,6 +20,11 @@ public class EquipUI : MonoBehaviour
         Populate();
     }
 
+    void OnDisable()
+    {
+        equipmentSystem.EquipmentChanged -= OnEquipmentChange;
+    }
+
     void OnEquipmentChange(EquipmentPosition pos)
     {
         Populate();
@@ -30,8 +35,9 @@ public class EquipUI : MonoBehaviour
     {
         for (int i = holder.childCount - 1; i >= 0; i--)
         {
-            Destroy(holder.GetChild(i).gameObject);
+            DestroyImmediate(holder.GetChild(i).gameObject);
         }
+
         foreach (var kv in inventorySystem.inventory)
         {
             if (kv.Key.type == Inventory.TypeOfObject.Equipment)

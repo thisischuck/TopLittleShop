@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public enum EquipmentPosition
 {
-    Boot, Elbow, Face, Hood, Leg, Pelvis, Shoulder, Torso, Weapon, Wrist
+    Boot, Elbow, Face, Hood, Leg, Pelvis, Shoulder, Torso, Weapon, Wrist, None
 }
 
 [CreateAssetMenu(menuName = "Systems/EquipmentSystem", fileName = "EquipmentSystem")]

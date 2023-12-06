@@ -16,6 +16,10 @@ MonoBehaviour:
     _serializedList:
     - Key: {fileID: 11400000, guid: 27c69ee82e9b61142a807a4be7c9f017, type: 2}
       Value: 1
+    - Key: {fileID: 11400000, guid: cb2e081e95f890343967603602e622fb, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 7237892b5f62a6a499791c716179e5de, type: 2}
+      Value: 1
     - Key: {fileID: 11400000, guid: 98c3ff96e12cb9341bd6782f16632da2, type: 2}
       Value: 1
     - Key: {fileID: 11400000, guid: 5e835ae43bb5e7f41aa86ec30b87970f, type: 2}
@@ -33,5 +37,11 @@ MonoBehaviour:
     - Key: {fileID: 11400000, guid: ba07e9f3f96020d46b6020fe1e6b982f, type: 2}
       Value: 1
     - Key: {fileID: 11400000, guid: 1f89bcfc627a522448af3d64ba63c04f, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 7a75fa38d7497ef4b9cfa6282df2755b, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 67f15a9b37c942443aee1727ac583982, type: 2}
+      Value: 1
+    - Key: {fileID: 11400000, guid: 2bdbd203eae31f44f98aded49e997731, type: 2}
       Value: 1
   _moneyInTheBank: 1000

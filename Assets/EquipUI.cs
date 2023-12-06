@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,35 +14,41 @@ public class EquipUI : MonoBehaviour
 
     public GameObject Character;
 
+    void OnEnable()
+    {
+        equipmentSystem.EquipmentChanged += OnEquipmentChange;
+        Populate();
+    }
+
+    void OnEquipmentChange(EquipmentPosition pos)
+    {
+        Populate();
+    }
+
     //Instantiate all Equipment not equiped from Inventory.
     public void Populate()
     {
+        for (int i = holder.childCount - 1; i >= 0; i--)
+        {
+            Destroy(holder.GetChild(i).gameObject);
+        }
         foreach (var kv in inventorySystem.inventory)
         {
             if (kv.Key.type == Inventory.TypeOfObject.Equipment)
             {
                 if (!equipmentSystem.isEquiped(kv.Key))
                 {
+                    if (holder.Find(kv.Key.id))
+                        return;
                     GameObject o = Instantiate(prefab, holder);
                     o.name = kv.Key.id;
-                    o.GetComponentInChildren<Image>().sprite = kv.Key.itemSprite;
+                    o.transform.Find("Sprite").GetComponent<Image>().sprite = kv.Key.itemSprite;
                     o.GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        foreach (var kv2 in equipmentSystem.Equipment)
-                        {
-                            if (kv2.Value == kv.Key)
-                            {
-                                button_click(o.name, kv2.Key);
-                            }
-                        }
+                        equipmentSystem.Equip(kv.Key, kv.Key.EquipmentPosition);
                     });
                 }
             }
         }
-    }
-
-    public void button_click(string id, EquipmentPosition position)
-    {
-
     }
 }

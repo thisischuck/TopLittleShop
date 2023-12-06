@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: l-hand-green
   type: 4
+  EquipmentPosition: 9
   itemName: 
   tag: 2
   weight: 0

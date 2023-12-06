@@ -11,6 +11,7 @@ public class GameItem : ScriptableObject
 {
     public string id;
     public TypeOfObject type;
+    public EquipmentPosition EquipmentPosition;
     public string itemName;
     public ResourceTag tag;
     public int weight;
